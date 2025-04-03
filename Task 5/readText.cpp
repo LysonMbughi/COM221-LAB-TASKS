@@ -17,22 +17,26 @@ int main(){
     
     string fileData;
 
-    fstream file("file.txt");
+    ifstream file;
+    file.open("file.txt", ios::binary);
     
     // Read entire file content (including multiple lines)
-    getline(file, fileData);
-
-    file.close();
-
-    cout << fileData<< endl;
+   if(file.is_open()){
+        getline(file,fileData);
+            
+        file.close();
+    }else {
+        cout << "Unable to open file" << endl;
+    }
         
-    // vowelCount(fileData);
+        
+    vowelCount(fileData);
 
-    // wordCount(fileData);
+    wordCount(fileData);
 
-    // reverse(fileData);
+    reverse(fileData);
 
-    // capitalize(fileData);
+    capitalize(fileData);
         
 
     return 0;

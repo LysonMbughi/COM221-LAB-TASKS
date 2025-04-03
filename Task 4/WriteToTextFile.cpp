@@ -5,7 +5,7 @@ using namespace std;
 
 int main(){
 
-    ofstream myfile("output/example.txt");
+    ofstream myfile("example.txt");
 
     if(myfile.is_open()){
         myfile << "This is a line.\n";
